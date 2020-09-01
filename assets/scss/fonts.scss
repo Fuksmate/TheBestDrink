@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "metropolis-light";
+  src: url("/fonts/metropolis-light.woff") format("woff"),
+  url("/fonts/metropolis-light.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "metropolis";
+  src: url("/fonts/metropolis-regular.woff") format("woff"),
+  url("/fonts/metropolis-medium.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "metropolis-medium";
+  src: url("/fonts/metropolis-medium.woff") format("woff"),
+  url("/fonts/metropolis-medium.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "metropolis-semibold";
+  src: url("/fonts/metropolis-semibold.woff") format("woff"),
+  url("/fonts/metropolis-medium.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "metropolis-bold";
+  src: url("/fonts/metropolis-bold.woff") format("woff"),
+  url("/fonts/metropolis-bold.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.playfair {
+  font-family: 'Playfair Display', serif;
+}
+
