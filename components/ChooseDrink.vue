@@ -1,6 +1,11 @@
 <template>
-    <main class="row chose-drink">
-        {{ drink }}
+    <main class="row choose-drink">
+        <div class="columns small-12 medium-4 medium-offset-4">
+            <img :src="drink" alt="drink">
+            <div class="fullwidth">
+           
+            </div>
+        </div>
     </main>
 </template>
 
@@ -17,4 +22,7 @@ export default {
 </script>
 
 <style lang="scss">
+.choose-drink {
+    padding-top: 20px;
+}
 </style>

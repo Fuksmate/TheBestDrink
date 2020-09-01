@@ -13,7 +13,7 @@ export default {
     ChooseDrink
   },
   async asyncData({ $axios }) {
-    const response = await $axios.$get('/random.php')
+  const response = await $axios.$get('/random.php')
     return {
       drink: response.drinks[0].strDrinkThumb
     }
