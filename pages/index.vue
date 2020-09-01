@@ -1,15 +1,21 @@
 <template>
   <div class="container">
+      <ChooseDrink :drink="drink" />
   </div>
 </template>
 
 <script>
+import ChooseDrink from '~/components/ChooseDrink'
+
 export default {
+  name: 'index',
+  components: {
+    ChooseDrink
+  },
   async asyncData({ $axios }) {
-    const response = await $axios.$get('/random.php')
-    console.log(response);
+  const response = await $axios.$get('/random.php')
     return {
-      page: response
+      drink: response.drinks[0].strDrinkThumb
     }
   }
 }
