@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-      <ChooseDrink :drink="drink" />
+      <ChooseDrink/>
   </div>
 </template>
 
@@ -12,15 +12,5 @@ export default {
   components: {
     ChooseDrink
   },
-  async asyncData({ $axios }) {
-  const response = await $axios.$get('/random.php')
-    return {
-      drink: response.drinks[0].strDrinkThumb
-    }
-  }
 }
 </script>
-
-<style lang="scss">
-
-</style>

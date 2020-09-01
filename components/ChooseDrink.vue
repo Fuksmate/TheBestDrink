@@ -1,10 +1,10 @@
 <template>
     <main class="row choose-drink">
         <div class="columns small-12 medium-4 medium-offset-4 choose-drink__relative">
-            <img :src="drink" alt="drink">
-            <div class="choose-drink__circle choose-drink__circle--left">
+            <img :src="mountains.drinks[0].strDrinkThumb" alt="drink">
+            <div @click="$fetch" class="choose-drink__circle choose-drink__circle--left">
             </div>
-            <div class="choose-drink__circle choose-drink__circle--right">
+            <div @click="$fetch" class="choose-drink__circle choose-drink__circle--right">
             </div>
         </div>
     </main>
@@ -13,11 +13,15 @@
 <script>
 export default {
     name: 'ChooseDrink',
-    props: {
-        drink: {
-            type: String,
-            required: true,
-        }
+    data() {
+      return {
+        mountains: ''
+      }
+    },
+    async fetch() {
+      this.mountains = await fetch(
+      'https://www.thecocktaildb.com/api/json/v1/1/random.php'
+      ).then(res => res.json())
     },
 }
 </script>
