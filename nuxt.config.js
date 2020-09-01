@@ -1,3 +1,4 @@
+const baseURL = 'https://www.thecocktaildb.com/api/json/v1/1/'
 
 export default {
   /*
@@ -57,7 +58,12 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/axios',
   ],
+  axios: {
+    // proxyHeaders: false
+    baseURL
+  },
   /*
   ** Build configuration
   ** See https://nuxtjs.org/api/configuration-build/
